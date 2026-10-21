@@ -1,13 +1,5 @@
-/* ============================================
-   ESTILOS PARA SABOR A LA PARRILLA BBQ
-   ============================================
-   Este archivo CSS controla todo el diseño visual de la página
-   Aquí definimos colores, layouts, animaciones y responsividad
-*/
+CSS
 
-/* VARIABLES DE COLOR
-   Definimos los colores principales aquí para que sea fácil cambiarlos
-   --accent es el naranja BBQ que usamos en toda la página */
 :root {
   --bg: #0f0f0f;
   --surface: #1b1a1f;
@@ -540,14 +532,14 @@ footer {
    ============================================
    Cuando haces scroll, las secciones aparecen con una animación suave */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Animación de entrada desde arriba */
@@ -1135,4 +1127,19 @@ footer {
   .hero-arrow { width: 44px; height: 44px; font-size: 22px; }
   .hero-prev { left: 10px; }
   .hero-next { right: 10px; }
+}
+
+#heroCarrusel .hero-slides {
+    overflow: hidden;
+}
+
+#heroCarrusel .hero-slide {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    pointer-events: none;
+}
+
+#heroCarrusel .hero-slide.active {
+    opacity: 1;
+    pointer-events: auto;
 }
